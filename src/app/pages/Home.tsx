@@ -49,9 +49,26 @@ export default function Home() {
       {/* Header */}
       <header className="bg-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div>
+          <div>
+            <div className="flex items-center justify-between items-center">
               <img src={Logo} alt="Credaxior Logo" className="h-15 w-auto mt-2"></img>
+              <nav className="font-roboto flex items-center gap-8">
+                <Link to="/admin" className="text-[#8516cb] font-bold text-xl hover:opacity-50 transition">
+                  ADMIN
+                </Link>
+
+                <Link to="/borrower" className="text-[#8516cb] font-bold text-xl hover:opacity-50 transition">
+                  BORROWER
+                </Link>
+
+                <Link to="/lender" className="text-[#8516cb] font-bold text-xl hover:opacity-50 transition">
+                   LENDER
+                </Link>
+
+                <Link to="/analyst" className="text-[#8516cb] font-bold text-xl hover:opacity-50 transition">
+                   ANALYST
+                </Link>
+              </nav>
             </div>
           </div>
         </div>
@@ -82,7 +99,7 @@ export default function Home() {
                   Streamline Your Loan Process
                 </h2>
 
-                <p className="text-xl max-w-xl opacity-90 mt-20">
+                <p className="text-xl max-w-xl mt-20 text-white">
                   Track payments, calculate interest, and manage transaction records with ease.
                   A truly integrated platform for borrowers and lenders.
                 </p>
@@ -143,11 +160,9 @@ export default function Home() {
                     </p>
 
                     {/* Button */}
-                    <Link to={role.path} className="relative z-10">
-                      <button className="w-full py-3 bg-black text-white rounded-full hover:opacity-90 transition cursor-pointer">
-                        Access Dashboard
-                      </button>
-                    </Link>
+                    <Link to={role.path} className="relative z-10 w-full py-3 bg-black text-white rounded-full hover:opacity-90 transition cursor-pointer text-center block">
+                      Access Dashboard
+                   </Link>
 
                   </div>
                 );

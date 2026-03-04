@@ -22,4 +22,9 @@
   font-family: 'Host Grotesk', sans-serif;
 }
 
+.roboto-flex {
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+
 @import "./mistbackground.css";

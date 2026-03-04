@@ -2,6 +2,7 @@ body {
   font-family: 'Host Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+
 @keyframes mistMove {
   0% {
     transform: translate(-5%, -5%) rotate(0deg);

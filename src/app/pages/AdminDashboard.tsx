@@ -64,7 +64,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <DashboardLayout title="Admin Portal" roleColor="text-purple-600">
+    <DashboardLayout title="ADMIN PORTAL" roleColor="text-purple-600 font-roboto">
       <div className="space-y-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

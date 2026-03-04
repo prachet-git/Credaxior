@@ -63,7 +63,7 @@ export default function BorrowerDashboard() {
   ];
 
   return (
-    <DashboardLayout title="Borrower Portal" roleColor="text-green-600">
+    <DashboardLayout title="BORROWER PORTAL" roleColor="font-roboto text-green-600">
       <div className="space-y-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
