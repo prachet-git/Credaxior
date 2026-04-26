@@ -23,8 +23,8 @@ export default function Register() {
       const data = await registerUser({ username, password, role });
 
       
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("role", data.role);
+      sessionStorage.setItem("token", data.token);
+      sessionStorage.setItem("role", data.role);
 
       
       const rolePath = data.role.toLowerCase();

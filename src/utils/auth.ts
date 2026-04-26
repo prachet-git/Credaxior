@@ -1,13 +1,13 @@
 export const getUser = () => {
-  const user = localStorage.getItem("user");
+  const user = sessionStorage.getItem("user");
   return user ? JSON.parse(user) : null;
 };
 
 export const logout = () => {
-  localStorage.removeItem("user");
+  sessionStorage.removeItem("user");
   window.location.href = "/";
 };
 
 export const isAuthenticated = () => {
-  return !!localStorage.getItem("user");
+  return !!sessionStorage.getItem("user");
 };

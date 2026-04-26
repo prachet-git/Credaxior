@@ -6,11 +6,11 @@ export default function Root() {
 
   const [, forceUpdate] = useState({});
 
-  const token = localStorage.getItem("token");
-  const role = localStorage.getItem("role");
+  const token = sessionStorage.getItem("token");
+  const role = sessionStorage.getItem("role");
 
   const handleLogout = () => {
-    localStorage.clear();
+    sessionStorage.clear();
 
     
     forceUpdate({});

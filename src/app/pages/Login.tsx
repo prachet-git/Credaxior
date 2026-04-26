@@ -11,8 +11,8 @@ export default function Login() {
 
   
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const role = localStorage.getItem("role");
+    const token = sessionStorage.getItem("token");
+    const role = sessionStorage.getItem("role");
 
     if (token && role) {
       navigate(`/${role.toLowerCase()}`);
@@ -31,8 +31,8 @@ export default function Login() {
       const data = await loginUser({ username, password });
 
       
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("role", data.role);
+      sessionStorage.setItem("token", data.token);
+      sessionStorage.setItem("role", data.role);
 
       const rolePath = data.role.toLowerCase();
       

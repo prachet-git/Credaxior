@@ -20,7 +20,7 @@ export default function Home() {
     try {
       const user = await loginUser({ username, password });
 
-      localStorage.setItem("user", JSON.stringify(user));
+      sessionStorage.setItem("user", JSON.stringify(user));
 
       if (user.role === "ADMIN") navigate("/admin");
       else if (user.role === "LENDER") navigate("/lender");

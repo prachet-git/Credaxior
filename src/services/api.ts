@@ -2,7 +2,7 @@ const BASE_URL = "http://localhost:8080";
 
 
 
-const getToken = () => localStorage.getItem("token");
+const getToken = () => sessionStorage.getItem("token");
 
 const getAuthHeaders = () => {
   const token = getToken();
@@ -61,8 +61,8 @@ export const registerUser = async (data: {
   }
 
   
-  localStorage.setItem("token", result.token);
-  localStorage.setItem("role", result.role);
+  sessionStorage.setItem("token", result.token);
+  sessionStorage.setItem("role", result.role);
 
   return result;
 };
@@ -87,8 +87,8 @@ export const loginUser = async (data: {
   }
 
   
-  localStorage.setItem("token", result.token);
-  localStorage.setItem("role", result.role);
+  sessionStorage.setItem("token", result.token);
+  sessionStorage.setItem("role", result.role);
 
   return result;
 };
@@ -111,7 +111,7 @@ export const createLoan = async (loan: any) => {
 
 
 export const logout = () => {
-  localStorage.clear();
+  sessionStorage.clear();
   window.location.href = "/";
 };
 
